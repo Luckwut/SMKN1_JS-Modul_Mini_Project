@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 3</title>
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+    </ul>
+
+    <hr>
+
+    <label>Warna Elemen Genap</label>
+    <select name="color" id="selectGenap" onchange="evenColor()">
+        <option>Select Color</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select> 
+    <br>
+    <label>Warna Elemen Ganjil</label>
+    <select name="color" id="selectGanjil" onchange="oddColor()">
+        <option>Select Color</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select>
+
+    <script>
+        let list = document.getElementsByTagName("li");
+        let selectGenap = document.getElementById("selectGenap");
+        let selectGanjil = document.getElementById("selectGanjil");
+        let red = document.getElementById("selectRed");
+        let green = document.getElementById("selectGreen");
+        let blue = document.getElementById("selectBlue");
+
+        function evenColor() {
+            let index = 0;
+            while (index < list.length) {
+                if (index % 2 == 0) {
+                    if (selectGenap.value == "red") {
+                        list[index + 1].style.color = "red";
+                    } 
+                    else if (selectGenap.value == "green") {
+                        list[index + 1].style.color = "green";
+                    } 
+                    else if (selectGenap.value == "blue") {
+                        list[index + 1].style.color = "blue";
+                    } 
+                    else {
+                        list[index + 1].style.color = "";
+                    }
+                }
+                index++;
+            }
+        }
+
+        function oddColor() {
+            let index = 0;
+            do {
+                if (index % 2 == 0) {
+                    if (selectGanjil.value == "red") {
+                        list[index].style.color = "red";
+                    } 
+                    else if (selectGanjil.value == "green") {
+                        list[index].style.color = "green";
+                    } 
+                    else if (selectGanjil.value == "blue") {
+                        list[index].style.color = "blue";
+                    } 
+                    else {
+                        list[index].style.color = "";
+                    }
+                }
+                index++;
+            } while (index < list.length);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <h1>Exam Generator</h1>
+    <hr>
+
+    <form>
+        <div>
+            <label>Question:</label>
+            <input type="text" id="inputQuestion" placeholder="Ex: Apa itu Javascript" required> <br>
+        </div>
+        <div>
+            <label>Options:</label>
+            <input type="text" id="inputOption" placeholder="Pisah opsi dengan koma (Max 4)" required>
+        </div>
+        <div>
+            <label>Correct Answer:</label>
+            <select name="question" id="selectCorrectOption">
+                <option>Select Correct Answer</option>
+            </select> 
+        </div>
+        <div>
+            <label>Time:</label>
+            <input type="number" id="inputTime" placeholder="Ex: 5" required> <span>&nbsp;Menit</span> <br>
+        </div>
+        <div>
+            <button onclick="generateQuestion()">Generate Exam</button>
+        </div>
+    </form>
+
+    <hr>
+
+    <table id="tableExam">
+        <tr>
+            <th>No</th>
+            <th colspan="4">Question</th>
+            <th>Time</th>
+            <th>Option</th>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

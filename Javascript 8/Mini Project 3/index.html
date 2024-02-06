@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 3</title>
+    <style>
+        table {
+            display: none;
+        }
+
+        table tr th, table tr td {
+            border: 1px solid;
+            text-align: center;
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <h1>Find Min, Max, Average</h1>
+    <form>
+        <label>Angka</label>
+        <input type="text" id="angkaInput" placeholder="Example: 1, 2, 3, 4, 5"> <br>
+        <button onclick="findNumber()">Find</button>
+    </form>
+    <hr>
+    <table>
+        <tr>
+            <th>Min</th>
+            <th>Max</th>
+            <th>Average</th>
+        </tr>
+        <tr>
+            <td id="minCell"></td>
+            <td id="maxCell"></td>
+            <td id="avgCell"></td>
+        </tr>
+    </table>
+
+    <script>
+        let minCell = document.getElementById("minCell");
+        let maxCell = document.getElementById("maxCell");
+        let avgCell = document.getElementById("avgCell");
+
+        function stringToArray(inputString) {
+            let array = inputString.split(',');
+            let resultArray = [];
+            for (let i = 0; i < array.length; i++) {
+                let trimmedValue = array[i].trim();
+                let parsedValue = parseFloat(trimmedValue);
+                if (!isNaN(parsedValue)) {
+                    resultArray.push(parsedValue);
+                }
+            }
+            return resultArray;
+        }
+
+        function findAverageNum(array) {
+            let sum = array.reduce((total, num) => total + num);
+            let length = array.length;
+            return sum / length;
+        }
+        
+        function findNumber() {
+            event.preventDefault();
+            let angka = document.getElementById("angkaInput").value;
+            let angkaArray = stringToArray(angka);
+            let min = Math.min(...angkaArray);
+            let max = Math.max(...angkaArray);
+            let avg = Number(findAverageNum(angkaArray).toFixed(2));
+
+            minCell.textContent = min;
+            maxCell.textContent = max;
+            avgCell.textContent = avg;
+
+            document.getElementsByTagName("table")[0].style.display = "block";
+        }
+    </script>
+</body>
+</html>

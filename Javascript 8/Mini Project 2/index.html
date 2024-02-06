@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 2</title>
+    <style>
+        table tr th, table tr td {
+            border: 1px solid;
+            text-align: center;
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <h1>Sorting Angka</h1>
+    <form>
+        <label>Angka</label>
+        <input type="text" id="angkaInput" placeholder="Example: 1, 2, 3, 4, 5"> <br>
+        <label>Sort</label>
+        <input type="radio" name="radio" id="ascending" checked> <label>Ascending</label>
+        <input type="radio" name="radio" id="descending"> <label>Descending</label>
+        <br>
+        <button onclick="sort()">Sort</button>
+    </form>
+    
+    <hr>
+    <table>
+        <tr>
+            <th>Angka</th>
+        </tr>
+        <tbody id="sortTable">
+            <!-- Isi Table -->
+        </tbody>
+    </table>
+
+    <script>
+        let ascending = document.getElementById("ascending");
+        let descending = document.getElementById("descending");
+        let sortTable = document.getElementById("sortTable");
+
+        function stringToArray(inputString) {
+            let array = inputString.split(',');
+            let resultArray = [];
+            for (let i = 0; i < array.length; i++) {
+                let trimmedValue = array[i].trim();
+                let parsedValue = parseFloat(trimmedValue);
+                if (!isNaN(parsedValue)) {
+                    resultArray.push(parsedValue);
+                }
+            }
+            return resultArray;
+        }
+
+        function sort() {
+            event.preventDefault();
+
+            sortTable.innerHTML = "";
+
+            let angka = document.getElementById("angkaInput").value;
+            let arrayAngka = stringToArray(angka);
+            
+            if (ascending.checked) {
+                arrayAngka.sort((a, b) => a - b);
+            }
+            if (descending.checked) {
+                arrayAngka.sort((a, b) => b - a);
+            }
+            
+            for (let i = 0; i < arrayAngka.length; i++) {
+                let tr = document.createElement("tr");
+                let td = document.createElement("td");
+                td.textContent = arrayAngka[i];
+                tr.appendChild(td);
+                sortTable.appendChild(tr);
+            }
+        }
+    </script>
+</body>
+</html>

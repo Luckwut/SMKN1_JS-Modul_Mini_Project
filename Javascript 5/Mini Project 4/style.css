@@ -1,0 +1,18 @@
+.configureTable {
+    display: table;
+    border-collapse: collapse;
+}
+
+.configureTable div {
+    display: table-row;
+}
+
+.configureTable div label, .configureTable div input {
+    padding-right: 1vw;
+    display: table-cell;
+    white-space: nowrap;
+}
+
+span {
+    font-size: 1.6em;
+}

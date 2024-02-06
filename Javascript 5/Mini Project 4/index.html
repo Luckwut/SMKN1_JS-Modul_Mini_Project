@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onchange="textColor(), hoverColor()">
+    <a href="../index.html">Back</a>
+    <ul id="unorderedList">
+        <!-- Generate List Disini -->
+    </ul>
+
+    <hr>
+
+    <span><b>Konfigurasi</b></span>
+    <form class="configureTable">
+        <div>
+            <label>Teks:</label>
+            <input type="text" id="inputIsiList" placeholder="Isi List Text">
+        </div>
+        <div>
+            <label>Jumlah:</label>
+            <input type="number" id="inputJumlahList" placeholder="Berapa Banyak List">
+        </div>
+    </form>
+
+    <br>
+
+    <span><b>Warna Text</b></span>
+    <form id="warnaText">
+        <input type="radio" name="clr" id="textBiru-Btn">
+        <label>Biru</label>
+        <input type="radio" name="clr" id="textHijau-Btn">
+        <label>Hijau</label>
+        <input type="radio" name="clr" id="textKuning-Btn">
+        <label>Kuning</label>
+        <input type="radio" name="clr" checked>
+        <label>Default</label>
+    </form>
+
+    <br>
+
+    <span><b>Warna Hover</b></span>
+    <form id="warnaHover">
+        <input type="radio" name="clr" id="hoverMerah-Btn">
+        <label>Merah</label>
+        <input type="radio" name="clr" id="hoverCokelat-Btn">
+        <label>Cokelat</label>
+        <input type="radio" name="clr" id="hoverPink-Btn">
+        <label>Pink</label>
+        <input type="radio" name="clr" checked>
+        <label>Default</label>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

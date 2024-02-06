@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 1</title>
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <ul>
+        <li>Manggis</li>
+        <li>Mangga</li>
+        <li>Alpukat</li>
+        <li>Sirsak</li>
+        <li>Durian</li>
+        <li>Rambutan</li>
+    </ul>
+
+    <hr>
+
+    <span style="font-size: 4vh;"><b>Warna Text</b></span>
+    <form id="warnaText" onchange="textColor()">
+        <input type="radio" name="clr" id="textBiru-Btn">
+        <label>Biru</label>
+        <input type="radio" name="clr" id="textHijau-Btn">
+        <label>Hijau</label>
+        <input type="radio" name="clr" id="textKuning-Btn">
+        <label>Kuning</label>
+        <input type="radio" name="clr" checked>
+        <label>Default</label>
+    </form>
+
+    <br>
+
+    <span style="font-size: 4vh;"><b>Warna Hover</b></span>
+    <form id="warnaHover" onchange="hoverColor()">
+        <input type="radio" name="clr" id="hoverMerah-Btn">
+        <label>Merah</label>
+        <input type="radio" name="clr" id="hoverCokelat-Btn">
+        <label>Cokelat</label>
+        <input type="radio" name="clr" id="hoverPink-Btn">
+        <label>Pink</label>
+        <input type="radio" name="clr" checked>
+        <label>Default</label>
+    </form>
+
+    <script>
+        // simpan list
+        let list = document.getElementsByTagName("li");
+
+        // simpan elemen text
+        let textBiru = document.getElementById("textBiru-Btn");
+        let textHijau = document.getElementById("textHijau-Btn");
+        let textKuning = document.getElementById("textKuning-Btn");
+
+        // simpan elemen hover
+        let hoverMerah = document.getElementById("hoverMerah-Btn");
+        let hoverCokelat = document.getElementById("hoverCokelat-Btn");
+        let hoverPink = document.getElementById("hoverPink-Btn");
+
+        function textColor() {
+            for (let i = 0; i < list.length; i++) {
+                if (textBiru.checked) {
+                    list[i].style.color = "blue";
+                } else if (textHijau.checked) {
+                    list[i].style.color = "green";
+                } else if (textKuning.checked) {
+                    list[i].style.color = "yellow";
+                } else {
+                    list[i].style.color = "";
+                }
+            }
+        }
+
+        function hoverColor() {
+            for (let i = 0; i < list.length; i++) {
+                list[i].onmouseover = function() {
+                    if (hoverMerah.checked) {
+                        list[i].style.color = "red";
+                    } else if (hoverCokelat.checked) {
+                        list[i].style.color = "brown";
+                    } else if (hoverPink.checked) {
+                        list[i].style.color = "pink";
+                    }
+                }
+                
+                list[i].onmouseout = function() {
+                    textColor();
+                }
+            }
+        }
+    </script>
+</body>
+</html>

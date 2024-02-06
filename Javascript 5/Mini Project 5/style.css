@@ -1,0 +1,49 @@
+form {
+    display: table;
+    border-collapse: collapse;
+}
+
+div {
+    display: table-row;
+}
+
+label {
+    padding-right: 1vw;
+}
+
+label, input {
+    display: table-cell;
+    white-space: nowrap;
+}
+
+
+table tr td, table tr th {
+    border: 1px solid;
+    text-align: center;
+}
+
+table tr th:nth-child(1) {
+    width: 2em;
+}
+
+table tr th:nth-child(2) {
+    width: 8em;
+}
+
+table tr th:nth-child(3) {
+    width: 4em;
+}
+
+table tr th:nth-child(4) {
+    width: 4em;
+}
+
+table tr td button {
+    margin: 0 auto;
+    display: block;
+}
+
+.berat {
+    border-color: black;
+    background-color: red;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 2</title>
+    <style>
+        .biru-dan-tebal {
+            color: blue;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <ul>
+        <li>Acura</li>
+        <li>Alfa Romeo</li>
+        <li>Aston Martin</li>
+        <li>Audi</li>
+        <li>Bentley</li>
+        <li>BMW</li>
+        <li>Bugatti</li>
+        <li>Buick</li>
+    </ul>
+    <ol>
+        <li>Acura</li>
+        <li>Alfa Romeo</li>
+        <li>Aston Martin</li>
+        <li>Audi</li>
+        <li>Bentley</li>
+        <li>BMW</li>
+        <li>Bugatti</li>
+        <li>Buick</li>
+    </ol>
+
+    <button onclick="changeListColor()">Ubah Warna Elemen Genap</button>
+
+    <script>
+        function changeListColor() {
+            // get element (tipe data Array)
+            let list = document.getElementsByTagName("li");
+
+            // iterasi Array for loops (check index satu per satu)
+            for (let index = 0; index < list.length; index++) {
+                // jika i dibagi 2 memiliki sisa 0 (genap)...
+                if (index % 2 === 0) {
+                    // akses list dari iterasi index ditambah 1 (index dimulai dari 0)
+                    // tambahkan class "biru-dan-tebal"
+                    list[index + 1].className = "biru-dan-tebal";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

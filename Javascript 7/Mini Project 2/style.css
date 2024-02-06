@@ -1,0 +1,82 @@
+/* Form Styling */
+form {
+    display: grid;
+    grid-template-columns: 11vw 23vw;
+    grid-template-rows: auto;
+    row-gap: 0.5vh;
+    grid-template-areas: 
+        "namaBuah inputNamaBuah ."
+        "beratBuah inputBeratBuah kg"
+        "gambar inputGambar ."
+        ". submit .";
+}
+
+.item-a {
+    grid-area: namaBuah;
+}
+
+.item-b {
+    grid-area: inputNamaBuah;
+}
+
+.item-c {
+    grid-area: beratBuah;
+}
+
+.item-d {
+    grid-area: inputBeratBuah;
+}
+
+.item-e {
+    grid-area: kg;
+    margin-left: 0.5vw;
+}
+
+.item-f {
+    grid-area: gambar;
+}
+
+.item-g {
+    grid-area: inputGambar;
+}
+
+.item-h {
+    grid-area: submit;
+    width: 10vw;
+}
+
+
+/* Table Styling */
+table tr th {
+    border: 1px solid;
+}
+
+table tr td {
+    border: 1px solid;
+    padding: 1vh 1vw 1vh 0.5vw;
+}
+
+/* No Cell */
+table tr th:nth-child(1) { 
+    width: 3em;
+} 
+
+/* Nama Buah Cell */
+table tr th:nth-child(2) {
+    width: 9em;
+}
+
+/* Berat Cell */
+table tr th:nth-child(3) {
+    width: 5em;
+}
+
+/* Gambar Cell */
+table tr th:nth-child(4) {
+    width: 15em;
+}
+
+/* Action Cell */
+table tr th:nth-child(5) {
+    width: 6em;
+}

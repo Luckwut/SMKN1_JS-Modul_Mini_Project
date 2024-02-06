@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 1</title>
+    <style>
+        tr th, tr td {
+            border: 1px solid;
+            width: 50vh;
+            height: 5vh;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <h1>Trayek Generator</h1>
+    <label><b>Trayek:</b> <i>(Beri Koma untuk setiap Trayek)</i></label> <br>
+    <textarea id="textArea" cols="40" rows="10"></textarea> <br>
+    <button id="submit-Btn" onclick="generateTrayek()">Generate</button>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Trayek</th>
+            </tr>
+        </thead>
+        <tbody id="trayekTable">
+            <!-- Trayek -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

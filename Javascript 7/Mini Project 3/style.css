@@ -1,0 +1,48 @@
+form {
+    display: table;
+    width: 30vw;
+    border-collapse: collapse;
+}
+
+div {
+    display: table-row;
+}
+
+label, input, select, span {
+    display: table-cell;
+    white-space: nowrap;
+}
+
+input[type="text"], input[type="number"] {
+    width: 20em;
+}
+
+label {
+    padding-right: 10px;
+}
+
+table tr th {
+    border: 1px solid;
+}
+
+table tbody tr td {
+    border: 1px solid;
+    padding: 1vh 1vw 1vh 0.5vw;
+}
+
+table tbody tr:nth-child(1) td:nth-child(1) {
+    width: 3vw;
+    text-align: center;
+}
+
+table tbody tr:nth-child(1) td:nth-child(2) {
+    width: 100vw;
+}
+
+table tbody tr:nth-child(1) td:nth-child(3) {
+    text-align: center;
+}
+
+table tbody tr td {
+    width: 8vw;
+}

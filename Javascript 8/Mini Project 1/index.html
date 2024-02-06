@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 1</title>
+    <style>
+        table tr th, table tr td {
+            border: 1px solid;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <h1>Prime Number Generator</h1>
+    <form>
+        <label>Angka Pertama</label>
+        <input type="number" id="minNumber"> <br>
+        <label>Angka Terakhir</label>
+        <input type="number" id="maxNumber"> <br>
+        <button onclick="generatePrimeTable()">Generate</button>
+    </form>
+    <hr>
+
+    <table id="primeTable">
+        <!-- Isi Table -->
+    </table>
+
+    <script>
+        let primeTable = document.getElementById("primeTable");
+
+        function isPrime(number) {
+            if (number <= 1) {
+                return false;
+            }
+
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+            
+            return true;
+        }
+
+
+        function generatePrimeArray(min, max) {
+            let primeArray = [];
+            for (min; min < max + 1; min++) {
+                if (isPrime(min)) {
+                    primeArray.push(min);
+                }
+            }
+            return primeArray;
+        }
+
+        
+        function generatePrimeTable() {
+            event.preventDefault();
+            primeTable.innerHTML = "";
+            let minNumber = Number(document.getElementById("minNumber").value);
+            let maxNumber = Number(document.getElementById("maxNumber").value);
+            
+            let headerRow = document.createElement("tr");
+            let headerCell = document.createElement("th");
+            headerCell.textContent = `Bilangan Prima Antara ${minNumber} dan ${maxNumber}`;
+            headerRow.appendChild(headerCell);
+            primeTable.appendChild(headerRow);
+
+            let primeArray = generatePrimeArray(minNumber, maxNumber);
+            for (let i = 0; i < primeArray.length; i++) {
+                let td = document.createElement("td");
+                let tr = document.createElement("tr");
+                td.textContent = primeArray[i];
+                tr.appendChild(td);
+                primeTable.appendChild(tr);
+            }
+        }
+    </script>
+</body>
+</html>

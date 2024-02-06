@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <h1>Table Buah</h1>
+    <form>
+        <div>
+            <label>Nama Buah:</label>
+            <input type="text" id="namaBuah" placeholder="Masukan Nama Buah"> <br>
+        </div>
+        <div>
+            <label>Berat:</label>
+            <input type="number" id="beratBuah" min="0" placeholder="Masukan Berat Buah"> <span>kg</span>
+        </div>
+        <button onclick="saveFruit()">Simpan</button>
+    </form>
+
+    <hr>
+    <table id="tableBuah">
+            <tr>
+                <th>No</th>
+                <th width="160px">Nama Buah</th>
+                <th width="70px">Berat</th>
+                <th width="75px">Action</th>
+            </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
