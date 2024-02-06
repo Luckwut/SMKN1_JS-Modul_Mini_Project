@@ -12,9 +12,9 @@ let textHijau = document.getElementById("textHijau-Btn");
 let textKuning = document.getElementById("textKuning-Btn");
 
 // simpan elemen radio untuk hover color
-let hoverMerah = document.getElementById("hoverMerah-Btn");
-let hoverCokelat = document.getElementById("hoverCokelat-Btn");
-let hoverPink = document.getElementById("hoverPink-Btn");
+let hoverTeal = document.getElementById("hoverTeal-Btn");
+let hoverGold = document.getElementById("hoverGold-Btn");
+let hoverLightGreen = document.getElementById("hoverLightGreen-Btn");
 
 // Fungsi Konfigurasi
 function generateList() {
@@ -55,12 +55,12 @@ function textColor() {
 function hoverColor() {
     for (let i = 0; i < list.length; i++) {
         list[i].onmouseover = function() {
-            if (hoverMerah.checked) {
-                list[i].style.color = "red";
-            } else if (hoverCokelat.checked) {
-                list[i].style.color = "brown";
-            } else if (hoverPink.checked) {
-                list[i].style.color = "pink";
+            if (hoverTeal.checked) {
+                list[i].style.color = "teal";
+            } else if (hoverGold.checked) {
+                list[i].style.color = "gold";
+            } else if (hoverLightGreen.checked) {
+                list[i].style.color = "lightgreen";
             }
         }
         
