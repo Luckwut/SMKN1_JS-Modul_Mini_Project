@@ -52,4 +52,12 @@ Pages: [Website](https://luckwut.github.io/SMKN1_JS-Modul_Mini_Project/Javascrip
 #### Mini Project 3 (Min, Max, Avg Number)
 Blog Post: TODO <br>
 Pages: [Website](https://luckwut.github.io/SMKN1_JS-Modul_Mini_Project/Javascript%208/Mini%20Project%203/index.html)
+
+#### Mini Project 4 (Editable Fruit Table with Data Store)
+Blog Post: TODO <br>
+Pages: [Website](https://luckwut.github.io/SMKN1_JS-Modul_Mini_Project/Javascript%208/Mini%20Project%204/index.html)
+
+#### Mini Project 5 (Editable Fruit Table with Pagination)
+Blog Post: TODO <br>
+Pages: [Website](https://luckwut.github.io/SMKN1_JS-Modul_Mini_Project/Javascript%208/Mini%20Project%205/index.html)
 <div><br></div>
