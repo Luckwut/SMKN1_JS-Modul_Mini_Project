@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="../index.html">Back</a>
+    <h1>Tabel Buah (Pagination)</h1>
+
+    <form onsubmit="return false;">
+        <div>
+            <label for="namaBuah">Nama Buah:</label>
+            <input type="text" id="namaBuah" required>
+        </div>
+        <div>
+            <label for="beratBuah">Berat:</label>
+            <input type="number" id="beratBuah" min="0" required>
+            <span>Kg</span>
+        </div>
+        <div>
+            <label for="gambarBuah">Gambar:</label>
+            <input type="text" id="gambarBuah">
+        </div>
+        <button onclick="addData(); renderData(tableDataStore);">Add</button>
+    </form>
+    <hr>
+
+    <div id="pagination-container">
+        <!-- Pagination -->
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama Buah</th>
+                <th>Berat</th>
+                <th>Gambar</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tableBuah">
+            <!-- Data Here -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -2,16 +2,45 @@ let namaBuahInput = document.getElementById("namaBuah");
 let beratBuahInput = document.getElementById("beratBuah");
 let gambarBuahInput = document.getElementById("gambarBuah");
 let tableBuah = document.getElementById("tableBuah");
+let paginationDiv = document.getElementById('pagination-container');
 
 // ------------------------------------------------------------------------- //
 
 let tableDataStore = [
-    // {nama: "Durian", berat: 6, gambar: "https://google.com"}
-]
+    // Data Here
+];
+
+// ------------------------------------------------------------------------- //
+
+let currentPage = 1;
+let maxRows = 5;
 
 function renderData(data) {
     tableBuah.innerHTML = "";
-    tableBuah.appendChild(generateTable(data));
+    let startIndex = (currentPage - 1) * maxRows;
+    let endIndex = startIndex + maxRows;
+    let extractedData = data.slice(startIndex, endIndex);
+    tableBuah.appendChild(generateTable(extractedData));
+}
+
+function renderPagination(data) {
+    paginationDiv.innerHTML = "";
+    let totalPages = Math.ceil(data.length / maxRows);
+    for (let i = 1; i <= totalPages; i++) {
+        let pageLink = document.createElement('a');
+        pageLink.textContent = i;
+        pageLink.setAttribute("onclick", "setPage(this)");
+        if (i === currentPage) {
+            pageLink.classList.add('active');
+        }
+        paginationDiv.appendChild(pageLink);
+    }
+}
+
+function setPage(anchorElement) {
+    let pageLink = anchorElement;
+    currentPage = Number(pageLink.textContent);
+    renderAll(tableDataStore);
 }
 
 function generateTable(data) {
@@ -26,7 +55,7 @@ function generateTable(data) {
         let tdGambar = document.createElement('td');
         let tdAction = document.createElement('td');
 
-        tdNomorUrut.textContent = i + 1;
+        tdNomorUrut.textContent = (currentPage - 1) * maxRows + i + 1;
         tdNama.textContent = data[i].nama;
         tdBerat.textContent = data[i].berat;
 
@@ -51,17 +80,23 @@ function generateTable(data) {
     return tableRows;
 }
 
-renderData(tableDataStore);
+function renderAll(data) {
+    renderData(data);
+    renderPagination(data);
+}
+
+renderAll(tableDataStore)
 
 // ------------------------------------------------------------------------- //
 
 function addData() {
-    let newData = {nama: namaBuahInput.value, 
+    let newData = {
+        nama: namaBuahInput.value, 
         berat: Number(beratBuahInput.value), 
         gambar: gambarBuahInput.value
     };
     tableDataStore.push(newData);
-    renderData(tableDataStore);
+    renderAll(tableDataStore);
 }
 
 function editData(button) {
@@ -102,7 +137,7 @@ function deleteData(button) {
     let buttonRow = button.closest('tr');
     let index = Number(buttonRow.children[0].textContent) - 1;
     tableDataStore.splice(index, 1);
-    renderData(tableDataStore);
+    renderAll(tableDataStore);
 }
 
 function saveData(button) {
@@ -117,7 +152,7 @@ function saveData(button) {
     tableDataStore[index].berat = berat;
     tableDataStore[index].gambar = gambar;
 
-    renderData(tableDataStore);
+    renderAll(tableDataStore);
 }
 
 // ------------------------------------------------------------------------- //

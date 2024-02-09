@@ -43,3 +43,30 @@ table tr th:nth-child(4) {
 table tr th:nth-child(5) {
     width: 15vw;
 }
+
+#pagination-container {
+    margin-bottom: 2vw;
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    gap: 1vw;
+}
+
+#pagination-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    border-radius: 15%;
+    color: black;
+    background-color:rgb(238, 238, 238);
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+#pagination-container a:hover,
+#pagination-container a.active {
+    background-color: tomato;
+    color: white;
+}
