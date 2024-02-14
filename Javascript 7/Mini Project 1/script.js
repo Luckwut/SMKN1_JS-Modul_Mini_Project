@@ -1,5 +1,4 @@
 let textArea = document.getElementById("textArea");
-let generateBtn = document.getElementById("generateBtn");
 let trayekTable = document.getElementById("trayekTable");
 
 function stringToNestedArray(inputString) {
