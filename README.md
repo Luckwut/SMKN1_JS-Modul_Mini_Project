@@ -43,22 +43,22 @@ Pages: [Website](https://luckwut.github.io/SMKN1_JS-Modul_Mini_Project/Javascrip
 
 ## Mini Project Modul 8
 #### Mini Project 1 (Prime Generator)
-Blog Post: TODO <br>
+Blog Post: [Blog](https://roihanfajareno.blogspot.com/2024/02/modul-8-prime-number-generator-1.html) <br>
 Pages: [Website](https://luckwut.github.io/SMKN1_JS-Modul_Mini_Project/Javascript%208/Mini%20Project%201/index.html)
 
 #### Mini Project 2 (Number Sorting)
-Blog Post: TODO <br>
+Blog Post: [Blog](https://roihanfajareno.blogspot.com/2024/02/modul-8-sorting-angka-2.html) <br>
 Pages: [Website](https://luckwut.github.io/SMKN1_JS-Modul_Mini_Project/Javascript%208/Mini%20Project%202/index.html)
 
 #### Mini Project 3 (Min, Max, Avg Number)
-Blog Post: TODO <br>
+Blog Post: [Blog](https://roihanfajareno.blogspot.com/2024/02/modul-8-find-min-max-average-3.html) <br>
 Pages: [Website](https://luckwut.github.io/SMKN1_JS-Modul_Mini_Project/Javascript%208/Mini%20Project%203/index.html)
 
 #### Mini Project 4 (Editable Fruit Table with Data Store)
-Blog Post: TODO <br>
+Blog Post: [Blog](https://roihanfajareno.blogspot.com/2024/02/modul-8-tabel-buah-data-store-4.html) <br>
 Pages: [Website](https://luckwut.github.io/SMKN1_JS-Modul_Mini_Project/Javascript%208/Mini%20Project%204/index.html)
 
 #### Mini Project 5 (Editable Fruit Table with Pagination)
-Blog Post: TODO <br>
+Blog Post: [Blog](https://roihanfajareno.blogspot.com/2024/02/modul-8-tabel-buah-pagination-5.html) <br>
 Pages: [Website](https://luckwut.github.io/SMKN1_JS-Modul_Mini_Project/Javascript%208/Mini%20Project%205/index.html)
 <div><br></div>
